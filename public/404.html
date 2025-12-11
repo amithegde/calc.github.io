@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
+    <script>
+      // Preserve path when redirecting back to SPA entry
+      const path = window.location.pathname + window.location.search + window.location.hash
+      window.location.replace('/' + (path.startsWith('/') ? path.substring(1) : path))
+    </script>
+  </body>
+</html>
+
